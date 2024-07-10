@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: amigoscode/kubernetes:spring-react-fullstack-v1
+        image: kpiua/schedule.kpi.ua
         resources:
           limits:
             memory: "512Mi"
             cpu: "500m"
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 
 ---
 
@@ -33,5 +33,5 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 80
-    targetPort: 8080
+  - port: 81
+    targetPort: 80
